@@ -4,7 +4,7 @@ from prefect import flow
 
 if __name__ == "__main__":
     flow.from_source(
-        source="",
+        source="https://github.com/edwardosindo/prefect-tutorial.git",
         entrypoint="prefect_tutorial.py:repo_info",
 
     ).deploy(
@@ -13,4 +13,3 @@ if __name__ == "__main__":
         cron="0 1 * * * ",
     )
 
-    
